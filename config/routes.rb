@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'prices/index'
+  get 'prices/show'
   get 'countries/index'
   get 'countries/show'
   get 'city_bikes/index'
