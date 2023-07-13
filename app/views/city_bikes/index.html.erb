@@ -10,28 +10,29 @@
   <body>
     <%= render 'shared/navbar' %>
 
-  <table class="table table-success table-striped">
+<table class="table table-success table-striped">
   <thead>
     <tr>
-      <th>Price</th>
-      <th>City Bike</th>
-      <th>Country</th>
+      <th>Name</th>
+      <th>Company</th>
+      <th>City</th>
       <th>Actions</th>
     </tr>
   </thead>
   <tbody>
-    <% @prices.each do |price| %>
+    <% @city_bikes.each do |city_bike| %>
       <tr>
-        <td><%= price.price %></td>
-        <td><%= price.city_bike.name %></td>
-        <td><%= price.country.name %></td>
+        <td><%= city_bike.name %></td>
+        <td><%= city_bike.company %></td>
+        <td><%= city_bike.city %></td>
         <td>
-          <%= link_to "Show", price_path(price), class: "btn btn-primary" %>
+          <%= link_to "Show", city_bike_path(city_bike), class: "btn btn-primary" %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
 
   </body>
 </html>
