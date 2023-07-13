@@ -3,4 +3,6 @@ class CityBike < ApplicationRecord
   has_many :prices
 
   validates :name, :company, :city, presence: true
+
+  paginates_per 30
 end
