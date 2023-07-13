@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'countries/index'
+  get 'countries/show'
   get 'city_bikes/index'
   get 'city_bikes/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
