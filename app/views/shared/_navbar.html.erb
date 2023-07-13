@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">All About Bikes</a>
+    <a class="navbar-brand" href="<%= root_path %>">All About Bikes</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,6 +17,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<%= countries_path %>">Countries</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= prices_path %>">CityBike Prices</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
