@@ -9,7 +9,22 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
+    <h1>Welcome to Our Page</h1>
 
+<p>On our website, you can find details of every single city bike and the prices in different countries. We provide descriptions of each company and the name of the bike they produce, along with the city and countries where they are available.</p>
+
+<p>Each city bike can have multiple prices due to production in different countries, forming a one-to-many relationship. You can click on the "SHOW" button to see more details about the product and its price.</p>
+
+<p>If you are searching for a specific product, you can use our search functionality. If it's available, you can definitely find it on our website.</p>
+
+<p>Each city bike can have multiple prices due to production in different countries, forming a one to many relationship.</p>
+<p>Each city bike can be found in many countries but one country can have many city bikes.</p>
+<p>Each city bike’s price corresponds to one country but one country can have many different prices of the city bikes.</p>
+
+<p>Dataset: <a href="http://api.citybik.es/v2/networks">http://api.citybik.es/v2/networks</a></p>
+
+
+ <!--<img src="<%= asset_path('erd.jpg') %>" > -->
   </body>
 </html>
 
