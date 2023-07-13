@@ -1,7 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require 'json'
+require 'open-uri'
+require "faker"
+
+# Fetch data from the API
+url = 'http://api.citybik.es/v2/networks'
+response = URI.open(url)
+data = JSON.parse(response.read)
+
+# Seed the data
+data['networks'].each do |network|
+  country_name = network['location']['country']
+  city_bike_name = network['name']
+  company = network['company'].first
+
+  # Find or create the country
+  country = Country.find_or_create_by(name: country_name)
+
+  # Create the city bike under the country
+  country.city_bikes.create(
+    name: city_bike_name,
+    company: company,
+    city: network['location']['city']
+  )
+end
